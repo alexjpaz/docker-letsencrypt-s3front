@@ -1,5 +1,6 @@
 # letsencrypt-s3front-docker:
 
+Adapated script from https://vittegleo.com/blog/letsencrypt-lambda-function/
 
 # Usage
 
