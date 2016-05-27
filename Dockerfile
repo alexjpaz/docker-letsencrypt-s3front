@@ -1,21 +1,7 @@
-FROM gliderlabs/alpine:3.3
+FROM alexjpaz/letsencrypt-s3front-docker
 
-RUN apk add --update \
-      python \
-      python-dev \
-      py-pip \
-      build-base \
-      linux-headers \
-      gcc \
-      dialog \
-      augeas-libs \
-      openssl-dev \
-      libffi-dev \
-      ca-certificates \
-  && pip install virtualenv \
-  && rm -rf /var/cache/apk/*
+RUN mkdir /app
+WORKDIR /app
+ADD main.py /app/main.py
 
-RUN pip install letsencrypt
-RUN pip install letsencrypt-s3front
-
-CMD ["letsencrypt"]
+ENTRYPOINT ["python", "main.py"]
