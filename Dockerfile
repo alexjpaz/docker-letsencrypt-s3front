@@ -1,4 +1,4 @@
-FROM alexjpaz/letsencrypt-s3front-docker
+FROM alexjpaz/letsencrypt-s3front-docker:base
 
 RUN mkdir /app
 WORKDIR /app
