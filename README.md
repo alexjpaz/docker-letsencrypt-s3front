@@ -6,8 +6,8 @@ Adapated script from https://vittegleo.com/blog/letsencrypt-lambda-function/
 
 ```
 docker run \
-  -e AWS_ACCESS_KEY_ID="$AWS_ACCESS_KEY" \
-  -e AWS_SECRET_ACCESS_KEY="$AWS_ACCESS_KEY" \
+  -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY \
+  -e AWS_ACCESS_KEY_ID="$AWS_ACCESS_KEY_ID" \
   letsencrypt-s3front-docker \
   --email $EMAIL \
   --domain $DOMAIN \
