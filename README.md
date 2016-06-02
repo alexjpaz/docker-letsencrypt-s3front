@@ -1,4 +1,4 @@
-# letsencrypt-s3front-docker:
+# letsencrypt-s3front:
 
 Adapated script from https://vittegleo.com/blog/letsencrypt-lambda-function/
 
