@@ -1,4 +1,4 @@
-# letsencrypt-s3front-docker
+# letsencrypt-s3front
 letsencrypt build into an alpine docker
 
 # Usage
