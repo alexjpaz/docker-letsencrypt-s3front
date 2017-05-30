@@ -1,6 +1,7 @@
 FROM gliderlabs/alpine:3.3
 
 RUN apk add --update \
+      git \
       python \
       python-dev \
       py-pip \
@@ -16,6 +17,6 @@ RUN apk add --update \
   && rm -rf /var/cache/apk/*
 
 RUN pip install letsencrypt
-RUN pip install letsencrypt-s3front
+RUN pip install git+git://github.com/alexjpaz/certbot-s3front.git@master
 
 CMD ["letsencrypt"]
